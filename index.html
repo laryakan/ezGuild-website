@@ -16,6 +16,9 @@
     <!-- Custom styles for this template -->
     <link href="./css/signin.css" rel="stylesheet">
 
+    <!-- Custom styles for ezGuild -->
+    <link href="./css/ezGuild.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./js/ie-emulation-modes-warning.js"></script>
@@ -34,16 +37,11 @@
 
     <div class="container">
 
+      <div id="banner"></div>
       <form class="form-signin" role="form">
         <h2 class="form-signin-heading">Do you want to join my guild ?</h2>
         <input type="nickname" class="form-control" placeholder="Nickname (in-game)" required autofocus>
         <input type="email" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 

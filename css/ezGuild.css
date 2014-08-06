@@ -1,0 +1,29 @@
+html,body{
+    height: 100%
+}
+
+#holder{
+    min-height: 100%;
+    position:relative;
+}
+
+#body{
+    padding-bottom: 100px;    /* height of footer */
+}
+
+#banner{
+  background-image:url("../img/banner300x328.png");
+  height: 328px;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+footer{
+    height: 20px; 
+    width:100%;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: 0; 
+}
