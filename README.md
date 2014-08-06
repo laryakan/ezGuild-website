@@ -7,7 +7,7 @@ A "ready to use" guild website for gamer communities. This website will be the s
 
 For now we only have the front-end. To launch the static part of the site, type `./run` once you're in the app's directory.
   
-The front-end static part will be launch on 127.0.0.1:8080 (using node-static), once the server-side will be implemented, [express](http://expressjs.com/) will serve it.
+The front-end static part will be launch on 127.0.0.1:8080 (using node-static), once the server-side will be implemented, it will serve the static-side.
 
 I will develop the back-end part using node.js (imo), features will be:
 - Submit a request to guild master/officier
