@@ -1,4 +1,4 @@
-ezGuildSite
+ezGuild-website
 ===========
 
 ![gnu-knight](https://raw.githubusercontent.com/laryakan/ezGuildSite/master/frontend/img/banner273x296.png)
