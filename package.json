@@ -21,5 +21,13 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/laryakan/ezGuildSite/issues"
+  },
+  "devDependencies": {
+    "nodemon": "~1.2.1",
+    "mocha": "~1.21.3"
+  },
+  "dependencies": {
+    "express": "~4.8.0",
+    "node-static": "~0.7.4"
   }
 }
