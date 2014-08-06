@@ -17,7 +17,7 @@ I will develop the backend part using node.js (imo), features will be:
 
 Then :
 - Multi guild support
-- Multi games support
+- Multi game support
 
 All this through a rest API, maybe using something like elasticsearch.
 
