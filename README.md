@@ -1,6 +1,8 @@
 ezGuild-website
 ===========
 
+!!! Lastest news : The backend-side will be here : [ezGuild-webservices](https://github.com/laryakan/ezGuild-webservices) !!!
+
 ![gnu-knight](https://raw.githubusercontent.com/laryakan/ezGuildSite/master/frontend/img/banner273x296.png)
 
 A "ready to use" guild website for gamer communities. This website will be the simpliest you ever seen.
