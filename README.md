@@ -26,3 +26,5 @@ Going forward, I'll maybe develop some more features like organizing event accor
 Anyway, this site will be [KISS](http://en.wikipedia.org/wiki/KISS_principle)-like for any user on it.
 
 GNU Knight credits: [Gnu Knight by tonyk](https://openclipart.org/detail/14546/gnu-knight-by-tonyk)
+
+Disclamer : I'm French, if you don't understand some commit, just ask me ;) 
