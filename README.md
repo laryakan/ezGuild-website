@@ -5,7 +5,7 @@ ezGuildSite
 
 A "ready to use" guild website for gamer communities. This website will be the simpliest you ever seen.
 
-For now we only have the front-end. To launch the static part of the site, type `npm start`, and to stop it `npm stop`
+For now we only have the front-end. To launch the static part of the site, type `./run` once you're in the directory.
   
 The front-end static part will be launch on 127.0.0.1:8080 (using node-static)
 
