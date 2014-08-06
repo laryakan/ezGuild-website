@@ -2,7 +2,7 @@
   "name": "ezGuildSite",
   "version": "0.0.1",
   "description": "An easy (and light) keyturn website for guilds",
-  "main": "app.js",
+  "main": "./node_modules/node-static/bin/cli.js .",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/*-test.js"
   },
