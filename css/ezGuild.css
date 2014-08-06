@@ -19,8 +19,14 @@ html,body{
   position: relative;
 }
 
+.little {
+  font-size: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 footer{
-    height: 40px; 
+    height: 80px; 
     width:100%;
     position: absolute;
     text-align: center;
