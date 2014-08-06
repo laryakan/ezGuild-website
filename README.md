@@ -1,6 +1,8 @@
 ezGuildSite
 ===========
 
+![gnu-knight](https://raw.githubusercontent.com/laryakan/ezGuildSite/master/frontend/img/banner273x296.png)
+
 A "ready to use" guild website for gamer communities. This website will be the simpliest you ever seen.
 
 For now we only have the frontend. To launch the static part of the site, type `npm start`, and to stop it `npm stop`
