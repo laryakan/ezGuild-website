@@ -18,3 +18,5 @@ I will develop the backend part using node.js (imo), features will be:
 All this through a rest API, maybe using something like elasticsearch.
 
 Going forward, I'll maybe develop some more features like organizing event according to the Guild Wars 2 public API (or other games) + elasticsearch. Depending on motivation.
+
+GNU Knight credits: [Gnu Knight by tonyk](https://openclipart.org/detail/14546/gnu-knight-by-tonyk)
