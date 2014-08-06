@@ -15,6 +15,10 @@ I will develop the backend part using node.js (imo), features will be:
 - Registering guild members
 - Kick guild member
 
+Then :
+- Multi guild support
+- Multi games support
+
 All this through a rest API, maybe using something like elasticsearch.
 
 Going forward, I'll maybe develop some more features like organizing event according to the Guild Wars 2 public API (or other games) + elasticsearch. Depending on motivation.
