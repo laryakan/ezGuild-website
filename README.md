@@ -27,7 +27,7 @@ Anyway, this site will be [KISS](http://en.wikipedia.org/wiki/KISS_principle)-li
 
 Credits: 
  - [Gnu Knight by tonyk](https://openclipart.org/detail/14546/gnu-knight-by-tonyk)
- - Front-end powered by [Bootstrap](http://getbootstrap.com/) and [npm node-static](https://www.npmjs.org/package/node-static)
+ - Front-end powered by [Bootstrap](http://getbootstrap.com/) and [node-static](https://github.com/cloudhead/node-static)
  - Back-end will be powered by [node.js](http://nodejs.org/)
  - Data persistance will be provided by [elasticsearch](http://www.elasticsearch.org/) and/or [mongoDB](http://www.mongodb.org/)
 
