@@ -1,8 +1,7 @@
 ezGuild-website
 ===========
 
-Informations
-===
+### Informations
 > _The backend-side is here : [ezGuild-webservices](https://github.com/laryakan/ezGuild-webservices)_
 
 ![gnu-knight](https://raw.githubusercontent.com/laryakan/ezGuildSite/master/img/banner273x296.png)
