@@ -1,5 +1,0 @@
-#!/bin/bash
-
-mkdir -p ./log/
-npm install
-./node_modules/node-static/bin/cli.js ./ &>./log/app.log
