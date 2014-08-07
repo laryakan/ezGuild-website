@@ -1,0 +1,26 @@
+#!/bin/bash
+
+mkdir -p ./log/
+mkdir -p ./pid/
+
+npm install
+
+echo 'usage: ./run {start|stop}'
+echo
+
+CURRENTDIR=`pwd`
+
+if [ "$1" == "start" ]; then
+  "$CURRENTDIR/node_modules/forever/bin/forever" "start" \
+  "-l" "$CURRENTDIR/log/forever.log" "-a" \
+  "-o" "$CURRENTDIR/log/node-static.out" \
+  "-e" "$CURRENTDIR/log/node-static.err" \
+  "--pidFile" "$CURRENTDIR/pid/forever.pid" \
+  "$CURRENTDIR/node_modules/node-static/bin/cli.js" "./public/"
+fi
+
+if [ "$1" == "stop" ]; then
+  "$CURRENTDIR/node_modules/forever/bin/forever" "stop" "$CURRENTDIR/node_modules/node-static/bin/cli.js"
+fi
+
+exit 0
