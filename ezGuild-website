@@ -10,17 +10,21 @@ echo
 
 CURRENTDIR=`pwd`
 
+#Type the script you want to run with forever HERE:
+SCRIPT="$CURRENTDIR/node_modules/node-static/bin/cli.js"
+SCRIPT_OPTS="./public/"
+
 if [ "$1" == "start" ]; then
   "$CURRENTDIR/node_modules/forever/bin/forever" "start" \
   "-l" "$CURRENTDIR/log/forever.log" "-a" \
   "-o" "$CURRENTDIR/log/node-static.out" \
   "-e" "$CURRENTDIR/log/node-static.err" \
   "--pidFile" "$CURRENTDIR/pid/forever.pid" \
-  "$CURRENTDIR/node_modules/node-static/bin/cli.js" "./public/"
+  "$SCRIPT" "$SCRIPT_OPTS"
 fi
 
 if [ "$1" == "stop" ]; then
-  "$CURRENTDIR/node_modules/forever/bin/forever" "stop" "$CURRENTDIR/node_modules/node-static/bin/cli.js"
+  "$CURRENTDIR/node_modules/forever/bin/forever" "stop" "$SCRIPT"
 fi
 
 exit 0
