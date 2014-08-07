@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir -p ./foreverWorkspace/
+
+npm install
+
+if[ "$1" == 'start']; then
+  ./node_modules/forever/bin/forever start -p ./foreverWorkspace/ ./node_modules/node-static/bin/cli.js ./
+fi
+
+if[ "$1" == 'stop']; then
+  ./node_modules/forever/bin/forever stop ./node_modules/node-static/bin/cli.js ./
+fi
