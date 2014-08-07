@@ -1,7 +1,7 @@
 ezGuild-website
 ===========
 
-!!! Lastest news : The backend-side will be here : [ezGuild-webservices](https://github.com/laryakan/ezGuild-webservices) !!!
+> _The backend-side is here : [ezGuild-webservices](https://github.com/laryakan/ezGuild-webservices)_
 
 ![gnu-knight](https://raw.githubusercontent.com/laryakan/ezGuildSite/master/img/banner273x296.png)
 
@@ -9,9 +9,9 @@ A "ready to use" guild website for gamer communities. This website will be the s
 
 For now we only have the front-end. To launch the static part of the site, type `./run` once you're in the app's directory.
   
-The front-end static part will be launch on 127.0.0.1:8080 (using node-static), once the server-side will be implemented, it will serve the static-side (or not ;-) )
+The front-end static part will be launch on 127.0.0.1:8080 (using node-static).
 
-I will develop the back-end part using node.js (imo), features will be:
+I will develop the back-end part using node.js (imo) here [ezGuild-webservices](https://github.com/laryakan/ezGuild-webservices), features will be:
 - Submit a request to guild master/officier
 - Accept new member
 - Registering guild members
@@ -23,7 +23,7 @@ Then :
 
 All this through a rest API, maybe using something like elasticsearch.
 
-Going forward, I'll maybe develop some more features like organizing event according to the Guild Wars 2 public API (or other games) + elasticsearch. Depending on motivation.
+Going forward, I'll maybe develop some more features like organizing event according to the GW2 public API (or other games) + elasticsearch. Depending on motivation.
 
 Anyway, this site will be [KISS](http://en.wikipedia.org/wiki/KISS_principle)-like for any user on it.
 
