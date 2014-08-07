@@ -1,4 +1,5 @@
 #!/bin/bash
 
 mkdir -p ./log/
-./node_modules/node-static/bin/cli.js ./frontend/ &>./log/app.log
+npm install
+./node_modules/node-static/bin/cli.js ./ &>./log/app.log
