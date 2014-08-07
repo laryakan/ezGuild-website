@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/laryakan/ezGuildSite.git"
+    "url": "https://github.com/laryakan/ezGuild-website.git"
   },
   "keywords": [
     "guild",
@@ -20,7 +20,7 @@
   "author": "William \"Laryakan\" Paul",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/laryakan/ezGuildSite/issues"
+    "url": "https://github.com/laryakan/ezGuild-website/issues"
   },
   "devDependencies": {
     "nodemon": "~1.2.1",
