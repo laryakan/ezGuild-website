@@ -1,13 +1,19 @@
 #!/bin/bash
 
-mkdir -p ./foreverWorkspace/
+mkdir -p ./log/
+mkdir -p ./pid/
 
 npm install
 
-if[ "$1" == 'start']; then
-  ./node_modules/forever/bin/forever start -p ./foreverWorkspace/ ./node_modules/node-static/bin/cli.js ./
+if[ "$1" -eq "start" ]; then
+  ./node_modules/forever/bin/forever start \
+  -l ./log/forever.log \
+  -o ./log/node-static.out \
+  -e ./log/node-static.err \
+  --pidFile ./pid/forever.pid \
+  ./node_modules/node-static/bin/cli.js ./
 fi
 
-if[ "$1" == 'stop']; then
-  ./node_modules/forever/bin/forever stop ./node_modules/node-static/bin/cli.js ./
+if[ "$1" -eq "stop" ]; then
+  ./node_modules/forever/bin/forever stop --pidFile ./pid/forever.pid ./node_modules/node-static/bin/cli.js ./
 fi
