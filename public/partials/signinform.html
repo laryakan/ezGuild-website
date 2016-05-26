@@ -1,0 +1,6 @@
+<form class="form-signin" role="form" name="form.form1" ng-controller="firstFormCtrl">
+  <h2 class="form-signin-heading">Hi {{user.nickname}} do you want to join {{community.name}} ?</h2>
+  <input type="nickname" ng-model="user.nickname" class="form-control" placeholder="Nickname (in-game)" required autofocus>
+  <input type="email" ng-model="user.email" class="form-control" placeholder="Email address" required autofocus>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signin()">Sign in</button>
+</form>

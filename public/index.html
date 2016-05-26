@@ -26,23 +26,17 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-  <script src="../app/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+  <script src="app/app.js"></script>
 </head>
 
-<body ng-controller="ezGuildCtrl">
+<body>
   <div class="container">
     <div id="banner"></div>
-    <form class="form-signin" role="form" name="form.form1">
-      <h2 class="form-signin-heading">Hi {{user.nickname}} do you want to join my guild ?</h2>
-      <input type="nickname" ng-model="user.nickname" class="form-control" placeholder="Nickname (in-game)" required autofocus>
-      <input type="email" ng-model="user.email" class="form-control" placeholder="Email address" required autofocus>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="change()">Sign in</button>
-    </form>
+    <div ng-view></div>
     <footer>
-      <div class="container">
-        <p class="text-muted">Powered by <a href="https://github.com/laryakan/ezGuildSite">ezGuildSite</a> and <a href="http://getbootstrap.com/">Bootstrap</a>
-        </p>
-      </div>
+      <p class="text-muted">Powered by <a href="https://github.com/laryakan/ezGuildSite">ezGuildSite</a> and <a href="http://getbootstrap.com/">Bootstrap</a>
+      </p>
     </footer>
 
   </div>
