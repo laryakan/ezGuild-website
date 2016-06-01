@@ -1,6 +1,6 @@
 var ezGuildApp = angular.module('ezGuildApp', ["ngRoute"]);
 
-// Router
+// ROUTER
 ezGuildApp.config(function($routeProvider) {
   $routeProvider
     .when("/sign", {
@@ -10,26 +10,47 @@ ezGuildApp.config(function($routeProvider) {
     .when("/confirm", {
       templateUrl: "partials/confirmation.html",
       controller: "firstConfirmCtrl"
+    }).when("/members", {
+      templateUrl: "partials/members.html",
+      controller: "membersCtrl",
+      resolve: {
+        postPromise: ['members', function(members) {
+          return members.getAll();
+        }]
+      }
     })
     .otherwise({
       redirectTo: "/sign"
     })
 });
 
-
+// SERVICES
 //Dependencies injectors
-ezGuildApp.factory("userService", function(){
+ezGuildApp.factory("userService", function() {
   var user = {
     nickname: '',
     email: ''
   };
   return {
-    getUser: function(){
+    getUser: function() {
       return user;
     }
   }
 });
 
+//Members
+ezGuildApp.factory("membersService", [function() {
+  o.getAll = function() {
+    return $http.get('/members').success(function(data) {
+      angular.copy(data, o.members);
+    });
+  }
+
+  return o;
+}]);
+
+
+// CONTROLLERS
 //Form controller
 ezGuildApp.controller('firstFormCtrl', function firstFormCtrl($scope, userService, $location) {
   $scope.user = userService.getUser();
@@ -41,7 +62,13 @@ ezGuildApp.controller('firstFormCtrl', function firstFormCtrl($scope, userServic
   }
 });
 
-//Confirme controller
+//Confirm controller
 ezGuildApp.controller('firstConfirmCtrl', function firstConfirmCtrl($scope, userService) {
   $scope.user = userService.getUser();
+});
+
+//Members controller
+ezGuildApp.controller('membersCtrl', function firstConfirmCtrl($scope, membersService) {
+  $scope.members = membersService.getAll();
+  console.log($scope.members);
 });
