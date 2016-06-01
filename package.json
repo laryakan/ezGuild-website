@@ -27,8 +27,8 @@
     "mocha": "~1.21.3"
   },
   "dependencies": {
-    "node-static": "~0.7.4",
+    "express": "^4.13.4",
     "minimist": "~0.2.0",
-    "forever": "~0.11.1"
+    "node-static": "~0.7.4"
   }
 }
