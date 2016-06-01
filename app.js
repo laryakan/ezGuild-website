@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-routes(app);
+
 
 // Handler d'erreur
 app.use(function(req, res, next) {
@@ -52,6 +52,7 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+routes(app);
 
 
 module.exports = app;
