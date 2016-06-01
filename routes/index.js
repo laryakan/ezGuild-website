@@ -1,9 +1,25 @@
 var express = require('express');
-var router = express.Router();
+module.exports = function(server) {
+  //datasets
+  var members = {
+    'henry': {
+      a: 45,
+      s: 'male',
+      v: 'Paris'
+    },
+    'francis': {
+      a: 35,
+      s: 'male',
+      v: 'Paris'
+    },
+    'pascal': {
+      a: 38,
+      s: 'male',
+      v: 'Metz'
+    }
+  };
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-module.exports = router;
+  server.get('/members', function(req, res, next) {
+    res.json(members);
+  });
+};

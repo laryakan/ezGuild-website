@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
 
 var app = express();
 
@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+routes(app);
 
 // Handler d'erreur
 app.use(function(req, res, next) {
@@ -36,8 +38,7 @@ app.use(function(req, res, next) {
 // Dèv handler
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
+    res.status(err.status || 500).send('error', {
       message: err.message,
       error: err
     });
@@ -46,8 +47,7 @@ if (app.get('env') === 'development') {
 
 // Prod handler
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
+  res.status(err.status || 500).send('error', {
     message: err.message,
     error: {}
   });

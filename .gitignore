@@ -2,3 +2,4 @@ node_modules
 log
 pid
 forever-workspace
+npm-debug.log
