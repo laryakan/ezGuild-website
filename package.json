@@ -4,6 +4,7 @@
   "description": "An easy (and light) keyturn website for guilds",
   "main": "./bin/www",
   "scripts": {
+    "start": "./bin/www",
     "test": "./node_modules/mocha/bin/mocha ./test/*-test.js"
   },
   "repository": {
