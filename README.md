@@ -7,11 +7,11 @@ ezGuild-website
 
 A "ready to use" guild website for gamer communities. This website will be the simpliest you ever seen.
 
-For now we only have the front-end. To launch the static part of the site, type `./ezGuild-website start` once you're in the app's directory. `./ezGuild-website stop` to stop the [node-static](https://github.com/cloudhead/node-static) server.
+For now we only have the front-end. To launch the app, type `npm start` once you're in the app's directory.
   
-The front-end static part will be launch on 127.0.0.1:8080 (using [node-static](https://github.com/cloudhead/node-static)).
+The front-end static part will be launch on 127.0.0.1:3000 (using [express](http://expressjs.com/)).
 
-I will develop the back-end part using node.js (imo) here [ezGuild-webservices](https://github.com/laryakan/ezGuild-webservices), features will be:
+I will develop the back-end part using node.js, features will be:
 - Submit a request to guild master/officier
 - Accept new member
 - Registering guild members (after acceptation)
