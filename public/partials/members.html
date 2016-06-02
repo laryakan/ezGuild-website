@@ -1,0 +1,15 @@
+<div ng-controller="membersCtrl">
+  <div ng-repeat="member in members track by $index" class="member">
+    <img src="{{member.i}}" class='img-responsive member-avatar img-thumbnail' alt="{{member.n}} avatar"></img>
+    <ul class="member-details">
+      <li class="member-nickname">
+        {{member.n}}</li>
+      <li class="member-infos">
+        {{member.a}}</li>
+      <li class="member-infos">
+        {{member.s}}</li>
+      <li class="member-infos">
+        {{member.v}}</li>
+    </ul>
+  </div>
+</div>

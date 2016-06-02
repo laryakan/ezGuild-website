@@ -12,12 +12,7 @@ ezGuildApp.config(function($routeProvider) {
       controller: "firstConfirmCtrl"
     }).when("/members", {
       templateUrl: "partials/members.html",
-      controller: "membersCtrl",
-      resolve: {
-        postPromise: ['members', function(members) {
-          return members.getAll();
-        }]
-      }
+      controller: "membersCtrl"
     })
     .otherwise({
       redirectTo: "/sign"
@@ -27,22 +22,24 @@ ezGuildApp.config(function($routeProvider) {
 // SERVICES
 //Dependencies injectors
 ezGuildApp.factory("userService", function() {
+  var o = {};
   var user = {
     nickname: '',
     email: ''
   };
-  return {
-    getUser: function() {
-      return user;
-    }
+  o.getUser = function() {
+    return user;
   }
+
+  return o;
 });
 
 //Members
 ezGuildApp.factory("membersService", [function() {
-  o.getAll = function() {
-    return $http.get('/members').success(function(data) {
-      angular.copy(data, o.members);
+  var o = {};
+  o.getAll = function($http, cb) {
+    return $http.get('/api/members').success(function(data) {
+      cb(data);
     });
   }
 
@@ -68,7 +65,9 @@ ezGuildApp.controller('firstConfirmCtrl', function firstConfirmCtrl($scope, user
 });
 
 //Members controller
-ezGuildApp.controller('membersCtrl', function firstConfirmCtrl($scope, membersService) {
-  $scope.members = membersService.getAll();
-  console.log($scope.members);
+ezGuildApp.controller('membersCtrl', function firstConfirmCtrl($scope, $http, membersService) {
+  membersService.getAll($http, function(members) {
+    $scope.members = members;
+    console.log(JSON.stringify($scope.members));
+  });
 });

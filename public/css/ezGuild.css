@@ -1,14 +1,24 @@
-/*Sticky footer*/
-html, body {
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
   height: 100%
 }
+
 #holder {
   min-height: 100%;
   position: relative;
 }
+
 #body {
   padding-bottom: 100px;
 }
+
+
+/*Sticky footer*/
+
 footer {
   height: 20px;
   width: 100%;
@@ -18,11 +28,61 @@ footer {
   bottom: 0;
 }
 
+
+/* Foncts declaration*/
+
+@font-face {
+  font-family: TakeCover;
+  src: url(../fonts/TakeCover.ttf);
+}
+
+
 /* Custom set for ezGuild*/
+
 #banner {
   background-image: url("../img/banner273x296.png");
   width: 273px;
   height: 296px;
   margin: 0 auto;
   position: relative;
+}
+
+
+/*User Formating*/
+
+.member {
+  width: 150px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+  padding: 5px 5px 0 0 ;
+  float: left;
+  background: #f0ad4e;
+  background-clip: content-box;
+}
+
+.member-avatar {
+  margin: 25% 0 0 2px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.member-details {
+  width: 0px;
+  height: 80px;
+  margin-left: -35px;
+  float: left;
+  font-size: 0.875em;
+  list-style: none outside;
+}
+
+.member-nickname {
+  font-family: TakeCover;
+  font-size: 1.6em;
+}
+
+.member-infos {
+  margin-top: -5px;
 }
