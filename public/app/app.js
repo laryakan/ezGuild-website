@@ -48,12 +48,19 @@ ezGuildApp.factory("membersService", [function() {
 
 
 // CONTROLLERS
-//Form controller
-ezGuildApp.controller('firstFormCtrl', function firstFormCtrl($scope, userService, $location) {
-  $scope.user = userService.getUser();
+//Main Controller
+ezGuildApp.controller('mainCtrl', function mainCtrl($scope) {
   $scope.community = {
     name: 'my guild'
   };
+});
+
+//Form controller
+ezGuildApp.controller('firstFormCtrl', function firstFormCtrl($scope, userService, $location) {
+  $scope.user = userService.getUser();
+  // $scope.community = {
+  //   name: 'my guild'
+  // };
   $scope.signin = function() {
     $location.path('/confirm');
   }
